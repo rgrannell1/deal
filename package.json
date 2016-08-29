@@ -2,7 +2,9 @@
   "name": "deal",
   "version": "0.1.0",
   "description": "",
-  "dependencies": {},
+  "dependencies": {
+    "neodoc": "^0.10.1"
+  },
   "devDependencies": {},
   "bin": {
     "deal": "deal/cli/deal.js"
