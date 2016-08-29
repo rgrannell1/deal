@@ -4,6 +4,9 @@
   "description": "",
   "dependencies": {},
   "devDependencies": {},
+  "bin": {
+    "deal": "src/cli/deal.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rgrannell1/deal.git"
