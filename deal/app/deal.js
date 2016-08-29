@@ -21,9 +21,19 @@ const readStdin = onLine => {
 
 
 
+
+const calculateJitter = jitter => {
+	return Math.min(
+		Math.floor((Math.random( ) * 2 * jitter) - jitter),
+		0
+	)
+}
+
+
+
 const foo = function* (rate, jitter) {
 
-	for ( let timeout = 0; true; timeout += (rate + Math.floor(Math.random( ) * jitter)) ) {
+	for ( let timeout = 0; true; timeout += (rate + calculateJitter( )) ) {
 		yield fn => setTimeout(( ) => fn( ), timeout)
 	}
 

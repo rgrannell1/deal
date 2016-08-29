@@ -7,7 +7,6 @@
 
 
 const neodoc = require('neodoc')
-
 const deal   = require('../app/deal')
 
 
