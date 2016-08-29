@@ -1,4 +1,4 @@
-# deal
+# deal 0.1.0
 
 deal controls the rate at which lines flow through stdin.
 
