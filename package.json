@@ -5,7 +5,7 @@
   "dependencies": {},
   "devDependencies": {},
   "bin": {
-    "deal": "src/cli/deal.js"
+    "deal": "deal/cli/deal.js"
   },
   "repository": {
     "type": "git",
