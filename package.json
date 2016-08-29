@@ -1,0 +1,17 @@
+{
+  "name": "deal",
+  "version": "0.1.0",
+  "description": "",
+  "dependencies": {},
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rgrannell1/deal.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rgrannell1/deal/issues"
+  },
+  "homepage": "https://github.com/rgrannell1/deal#readme"
+}
