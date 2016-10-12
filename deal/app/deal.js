@@ -31,10 +31,16 @@ const calculateJitter = jitter => {
 
 
 
-const foo = function* (rate, jitter) {
 
-	for ( let timeout = 0; true; timeout += (rate + calculateJitter( )) ) {
-		yield fn => setTimeout(( ) => fn( ), timeout)
+
+const nextTimeout = function* (rate, jitter) {
+
+	for ( let timeout = 0; true; timeout += (rate + calculateJitter(jitter)) ) {
+
+		yield fn => {
+			setTimeout(( ) => fn( ), timeout)
+		}
+
 	}
 
 }
@@ -49,13 +55,14 @@ const deal = rawArgs => {
 	const args  = deal.preprocess(rawArgs)
 	var offset  = 0
 
-	const timeouts = foo(args.rate, args.jitter)
+	const timeouts = nextTimeout(args.rate, args.jitter)
 
 	readStdin(line => {
 
 		const timeout = timeouts.next( ).value
 
 		timeout(( ) => console.log(line))
+		timeout(( ) => { })
 
 	})
 
@@ -65,7 +72,7 @@ const deal = rawArgs => {
 deal.preprocess = rawArgs => {
 
 	return {
-		rate:   1000 * rawArgs['--rate'],
+		rate:   1000 * (1 / rawArgs['--rate']),
 		jitter: 1000 * rawArgs['--jitter']
 	}
 
