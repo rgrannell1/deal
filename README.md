@@ -1,8 +1,8 @@
-# deal 0.1.0
+# throttle 0.1.0
 
-deal controls the rate at which lines flow through stdin.
+throttle controls the rate at which lines flow through stdin.
 
-<img src="deal.gif"> </img>
+<img src="throttle.gif"> </img>
 
 ### License
 

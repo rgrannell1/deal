@@ -6,8 +6,8 @@
 
 
 
-const neodoc = require('neodoc')
-const deal   = require('../app/deal')
+const neodoc   = require('neodoc')
+const throttle = require('../app/throttle')
 
 
 
@@ -15,13 +15,13 @@ const deal   = require('../app/deal')
 
 const args = neodoc.run(`
 Name:
-	deal - control the rate that data flows through stdin
+	throttle - control the rate that data flows through stdin
 Usage:
-	deal [-r <num> | --rate <num>] [-j <num> | --jitter <num>]
+	throttle [-r <num> | --rate <num>] [-j <num> | --jitter <num>]
 Version:
 	0.1.0
 Description:
-	deal is a minimal utility for controlling the rate that data is emitted from standard input.
+	throttle is a minimal utility for controlling the rate that data is emitted from standard input.
 
 Options:
 	-r <num>, --rate <num>      the number of newline-delimited lines to emit to stdout per second. [default: 1]
@@ -36,4 +36,4 @@ Options:
 
 
 
-deal(args)
+throttle(args)

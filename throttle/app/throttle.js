@@ -50,9 +50,9 @@ const nextTimeout = function* (rate, jitter) {
 
 
 
-const deal = rawArgs => {
+const throttle = rawArgs => {
 
-	const args  = deal.preprocess(rawArgs)
+	const args  = throttle.preprocess(rawArgs)
 	var offset  = 0
 
 	const timeouts = nextTimeout(args.rate, args.jitter)
@@ -69,7 +69,7 @@ const deal = rawArgs => {
 
 }
 
-deal.preprocess = rawArgs => {
+throttle.preprocess = rawArgs => {
 
 	return {
 		rate:   1000 * (1 / rawArgs['--rate']),
@@ -82,4 +82,4 @@ deal.preprocess = rawArgs => {
 
 
 
-module.exports = deal
+module.exports = throttle

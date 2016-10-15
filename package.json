@@ -1,5 +1,5 @@
 {
-  "name": "deal",
+  "name": "throttle",
   "version": "0.1.0",
   "description": "",
   "dependencies": {
@@ -7,16 +7,16 @@
   },
   "devDependencies": {},
   "bin": {
-    "deal": "deal/cli/deal.js"
+    "throttle": "throttle/cli/throttle.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rgrannell1/deal.git"
+    "url": "git+https://github.com/rgrannell1/throttle.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rgrannell1/deal/issues"
+    "url": "https://github.com/rgrannell1/throttle/issues"
   },
-  "homepage": "https://github.com/rgrannell1/deal#readme"
+  "homepage": "https://github.com/rgrannell1/throttle#readme"
 }
